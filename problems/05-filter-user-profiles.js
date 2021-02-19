@@ -20,7 +20,16 @@ filterUserProfiles(facebookUsers, (user) => user.age > 30); // ["Mary", "Judy", 
 filterUserProfiles(facebookUsers, (user) => user.state === "New York"); // ["Mike"]
 ***********************************************************************/
 
-// your code here
+filterUserProfiles = (array, cb) => {
+let finalArr = []
+  for (let i = 0; i < array.length; i++){
+    let object = array[i]
+      if(cb(object)){
+        finalArr.push(object["name"])
+      }
+  }
+  return finalArr
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

@@ -14,7 +14,17 @@ pickyMyMap(booleans, (boolean) => !boolean); // [true, true]
 You may not use Array's `map()`, `filter()`, or `forEach()` methods.
 ***********************************************************************/
 
-// your code here
+pickyMyMap = (array, cb) => {
+let newArr = []
+	for (let i = 0; i < array.length; i++){
+		let element = array[i]
+			if(!!cb(element)){
+				newArr.push(cb(element))
+			}
+	}
+	return newArr
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
