@@ -20,9 +20,10 @@ console.log(clothesList); // ['tshirt', 'pants']
 ***********************************************************************/
 
 function shoppingList(list) {
-
-  // your code here
-
+  return function addItem(item){
+    list.push(item)
+    return list
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
