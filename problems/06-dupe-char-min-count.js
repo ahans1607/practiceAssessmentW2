@@ -6,16 +6,36 @@ character.
 
 Examples:
 
-duplicateCharMinCount("apple", 2) // ["p"]
-duplicateCharMinCount("banana", 2) // ["a", "n"]
-duplicateCharMinCount("What about a longer string?", 3) // ["a", "t", " "]
+
 ***********************************************************************/
 
 function duplicateCharMinCount(string, minCount) {
+	let finalArr = []
+	let obj = {}
+	let array = string.split("")
 
-	// your code here
+		for (let i = 0; i < array.length; i++){
+			let letter = array[i]
+				if (obj[letter] === undefined){
+				obj[letter] = 1	
+				} else {
+				obj[letter] += 1		
+				}
+		}
+
+		for(let key in obj){
+			if (obj[key] >= minCount){
+				finalArr.push(key)
+			}
+		}
+	return finalArr
+		// console.log(obj)
+	
 
 }
 
+console.log(duplicateCharMinCount("apple", 2)) // ["p"]
+console.log(duplicateCharMinCount("banana", 2)) // ["a", "n"]
+console.log(duplicateCharMinCount("What about a longer string?", 3)) // ["a", "t", " "]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = duplicateCharMinCount;
