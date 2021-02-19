@@ -6,13 +6,16 @@ mark at the end of the sentence.
 
 Examples:
 
+
+***********************************************************************/
+
+sentenceMaker = (...strings) => {
+	return strings.join(" ") + "!"
+}
+
 sentenceMaker('Hello', 'World'); // 'Hello World!'
 sentenceMaker('I', 'love', 'coding'); // 'I love coding!'
 sentenceMaker('The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog'); // 'The quick brown fox jumps over the lazy dog!'
-***********************************************************************/
-
-// your code here
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
 	module.exports = sentenceMaker;
